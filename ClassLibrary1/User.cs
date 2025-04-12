@@ -2,6 +2,6 @@
 {
     public class User<T>
     {
-        public T RegNum;
+        public T RegistrationStatus;
     }
 }
