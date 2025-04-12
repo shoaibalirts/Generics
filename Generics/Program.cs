@@ -1,5 +1,5 @@
-﻿using System;
-using ClassLibrary1;
+﻿using ClassLibrary1;
+using static System.Console;
 
 namespace Generics
 {
@@ -11,16 +11,29 @@ namespace Generics
             User<bool> user2 = new User<bool>();
             user1.RegistrationStatus = 1234;
             user2.RegistrationStatus = true;
-            Console.WriteLine(user1.RegistrationStatus);
-            Console.WriteLine(user2.RegistrationStatus);
+            WriteLine(user1.RegistrationStatus);
+            WriteLine(user2.RegistrationStatus);
 
             Student<int> std1 = new Student<int>();
             Student<string> std2 = new Student<string>();
 
             std1.Rank = 1;
             std2.Rank = "Absent";
-            Console.WriteLine(std1.Rank);
-            Console.WriteLine(std2.Rank);
+            WriteLine(std1.Rank);
+            WriteLine(std2.Rank);
+
+            Person<int, int> person1 = new Person<int, int>();
+            Person<int, string> person2 = new Person<int, string>();
+            person1.PersonNumber = 1;
+            person1.Age = 25;
+            person2.PersonNumber = 2;
+            person2.Age = "30-35";
+
+            WriteLine($"person1 number: {person1.PersonNumber}");
+            WriteLine($"person1 age: {person1.Age}");
+            WriteLine($"person2 number: {person2.PersonNumber}");
+            WriteLine($"person2 age: {person2.Age}");
+
 
         }
     }
