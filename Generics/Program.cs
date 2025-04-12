@@ -36,10 +36,20 @@ namespace Generics
                 WriteLine($"person2 age: {person2.Age}");
 
             }
+            {
+                MarksPrinter<GraduateStudent> graduatestudent1 = new MarksPrinter<GraduateStudent>();
+                graduatestudent1.stu = new GraduateStudent() { Marks = 80 };
+                graduatestudent1.PrintMarks();
+            }
 
-            MarksPrinter<GraduateStudent> graduatestudent1 = new MarksPrinter<GraduateStudent>();
-            graduatestudent1.stu = new GraduateStudent() { Marks = 80 };
-            graduatestudent1.PrintMarks();
+            WriteLine("---------------");
+            Sample s1 = new Sample();
+            Employee emp1 = new Employee() { Salary = 1000 };
+            RTSStudent rtsStudent1 = new RTSStudent() { Marks = 12 };
+            s1.PrintData<Employee>(emp1);
+            s1.PrintData<RTSStudent>(rtsStudent1);
+
+
 
         }
     }
