@@ -14,8 +14,8 @@ namespace Generics
             WriteLine(user1.RegistrationStatus);
             WriteLine(user2.RegistrationStatus);
 
-            Student<int> std1 = new Student<int>();
-            Student<string> std2 = new Student<string>();
+            Human<int> std1 = new Human<int>();
+            Human<string> std2 = new Human<string>();
 
             std1.Rank = 1;
             std2.Rank = "Absent";
